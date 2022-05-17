@@ -17,13 +17,13 @@
   Node.js is a required installation as well as Express.js, uuid and Heroku for deployment of the application.
 
   ## Usage 
-  The application allows the user to input, save and delete notes.
+  From the terminal, enter npm start to begin the application. Once confirmation of local host is listening, open broswer and input the local host info and proceed to use the application OR feel free to click on the Heroku link to access the application directly.
 
   ## Contributors
   Please feel free to contact me for further information regarding guidlines. My contact information is located under the Questions section.
 
   ## Tests
-  From the terminal, enter npm start to begin the application. Once confirmation of local host is listening, open broswer and input the local host info and proceed to use the application OR feel free to click on the Heroku link to access the application directly.
+  No testing is required for this application.
 
   ## License 
   The application is covered under the MIT license.
