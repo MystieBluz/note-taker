@@ -25,4 +25,4 @@ app.get("*", (req, res) =>
 );
 
 app.lsiten(PORT, () =>
-console.log('App is listening to PORT 3001'));
+console.log(`App is listening at ${PORT}`));
