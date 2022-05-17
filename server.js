@@ -1,28 +1,28 @@
+// Dependencies
 const express = require('express');
-const path = require("path");
-const api = require("./develop/public/assests/js/index.js")
 
-const PORT = process.env.PORT || 3001;
+// Point Server to the route files
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
+// Create an express server
 const app = express();
 
+// Set PORT
+const PORT = process.env.PORT || 3001;
+
+// Parse incoming string or array data
+app.use(express.urlencoded({ extended: true }));
+
+// Parse incoming JSON data
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
-app.use("/api", api);
 
-app.use(express.static("public"));
 
-app.get("/", (req,res) =>
-    res.sendFile(path.join(dirname, "/public/index.html"))
-);
+app.use(express.static('public'));
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
-app.get("/notes", (req, res) =>
-    res.sendFile(path.join(dirname, "public/index.html"))
-);
-
-app.get("*", (req, res) =>
-    res.sendFile(path.join(_dirname, "public/index.html"))
-);
-
-app.lsiten(PORT, () =>
-console.log(`App is listening at ${PORT}`));
+// Listener
+app.listen(PORT, () => {
+    console.log(`API server is ready on port ${PORT}!`);
+});
