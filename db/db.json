@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "title": "Go to Gym",
+        "text": "L.A. Fitness Zumba Class",
+        "id": "c9c30b6e-7578-4286-92c1-5753168defc1"
+    },
+    {
+        "title": "Place Instacart Order",
+        "text": "Groceries items for dinner and lunch\n",
+        "id": "2c63a949-d60e-4a9c-adbe-b79bd35e7e69"
+    },
+    {
+        "title": "Oil Change",
+        "text": "Take car to the dealership",
+        "id": "26bb8451-ca1f-4fe5-8867-2b9c5a4cbf3b"
+    },
+    {
+        "title": "Date Night",
+        "text": "Make reservations at favorite restaurant ",
+        "id": "55840537-d4aa-4125-8899-bdd66e07cdf8"
+    }
+]
