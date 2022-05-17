@@ -1,28 +1,35 @@
-// Dependencies
 const express = require('express');
+const path = require("path");
+const api = require("./routes/index.js");
 
-// Point Server to the route files
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
-
-// Create an express server
-const app = express();
-
-// Set PORT
 const PORT = process.env.PORT || 3001;
 
-// Parse incoming string or array data
-app.use(express.urlencoded({ extended: true }));
+const app = express();
 
-// Parse incoming JSON data
+// Middleware for parsing the JSON and form urlencoded data
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/api", api);
 
+app.use(express.static("public"));
 
-app.use(express.static('public'));
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+// GET route for the homepage
 
-// Listener
-app.listen(PORT, () => {
-    console.log(`API server is ready on port ${PORT}!`);
-});
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "/public/index.html"))
+);
+
+// GET "/notes" returns the notes.html file.
+app.get("/notes", (req, res) =>
+  res.sendFile(path.join(__dirname, "/public/notes.html"))
+);
+
+// GET "*" should return the index.html file for any other file paths.
+app.get("*", (req, res) => 
+  res.sendFile(path.join(__dirname, "/public/index.html"))
+);
+
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT}`)
+);
