@@ -32,3 +32,7 @@
   ## Questions
   Should there be any comments and/or inquiries, please feel free to contact me at misty.duhart@gmail.com. Also, you can search for my repo on GitHub by entering mduhart82 or you can view my projects at https://github.com/mduhart82.
 
+### Screenshot of Note Taker Application
+
+
+### Live Demo
