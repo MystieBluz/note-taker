@@ -1,22 +1,22 @@
 [
     {
         "title": "Go to Gym",
-        "text": "L.A. Fitness Zumba Class",
-        "id": "c9c30b6e-7578-4286-92c1-5753168defc1"
+        "text": "L.A. Fitness - Zumba Class",
+        "id": "27665de6-c25e-4239-b046-e3ccfad31319"
     },
     {
         "title": "Place Instacart Order",
-        "text": "Groceries items for dinner and lunch\n",
-        "id": "2c63a949-d60e-4a9c-adbe-b79bd35e7e69"
+        "text": "Buy Grocery Items",
+        "id": "f4c7a8f7-89e5-4b41-8076-9ba978d1ba91"
     },
     {
         "title": "Oil Change",
-        "text": "Take car to the dealership",
-        "id": "26bb8451-ca1f-4fe5-8867-2b9c5a4cbf3b"
+        "text": "Take Car to the Dealership :(",
+        "id": "e11d4e7f-c2b9-4d7b-909b-c5e102997968"
     },
     {
         "title": "Date Night",
-        "text": "Make reservations at favorite restaurant ",
-        "id": "55840537-d4aa-4125-8899-bdd66e07cdf8"
+        "text": "Make Reservation at Favorite Restaurant!",
+        "id": "9ad13ce7-2256-4e5b-b1c1-d2b6ca314dc5"
     }
 ]

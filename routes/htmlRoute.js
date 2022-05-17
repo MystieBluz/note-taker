@@ -7,19 +7,17 @@ const {
   writeToFile,
 } = require("../helpers/fsUtils");
 
-// This is a GET route for retrieving all the data
+// route for retrieving all the data
 router.get("/", (req, res) =>
   readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)))
 );
 
-// This is a POST route for submitting feedback
+// route for submitting feedback
 router.post("/", (req, res) => {
-  // This is a destructuring assignment for the items in req.body
+  
   const { title, text } = req.body;
 
-  // If all the required properties are present
   if (title && text) {
-    // below is the variable for the object we will save
     const inputNote = {
       title,
       text,
@@ -46,7 +44,6 @@ router.delete("/:id", (req, res) => {
       let match = false;
       let noteData = JSON.parse(data);
 
-    // This code will get rid of the matching note id
     for (let i = 0; i < noteData.length; i++) {
       if (requestId === noteData[i].id.toLowerCase()) {
         match = true;
@@ -55,7 +52,6 @@ router.delete("/:id", (req, res) => {
     }
 
     if (match) {
-      // write to the db.json
       writeToFile("./db/db.json", noteData);
       const response = {
         status: "success",
